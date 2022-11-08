@@ -1,5 +1,5 @@
 ---
-- hosts: all
+ - hosts: all
   tasks
     - name: Set timezone to 'Eastern Standard Time' (GMT-05:00) 
     win_timezone:
