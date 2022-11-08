@@ -1,5 +1,5 @@
 ---
-- hosts: win2016
+- hosts: all
   gather_facts: no
   tasks:
     - name: Check if service is running
