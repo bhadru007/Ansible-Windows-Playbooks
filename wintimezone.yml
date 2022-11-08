@@ -1,5 +1,5 @@
 ---
-- hosts: windows
+- hosts: all
   tasks:
 #SET Timezone to EST
   - name: Set timezone to 'Eastern Standard Time' (GMT-05:00) 
