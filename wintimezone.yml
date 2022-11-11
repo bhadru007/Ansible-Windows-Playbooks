@@ -1,7 +1,8 @@
 ---
- - name: windows
+- name: windows
+  become: false
   hosts: all
   tasks:
-    - name: Set timezone to 'Eastern Standard Time' (GMT-05:00) 
-      win_timezone:
-      timezone: Eastern Standard Time
+  - name: Set timezone to 'Eastern Standard Time' (GMT-05:00) 
+    win_timezone:
+     timezone: Eastern Standard Time
