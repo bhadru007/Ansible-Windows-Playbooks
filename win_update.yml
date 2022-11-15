@@ -1,0 +1,14 @@
+---
+- name: run windows update on windows machines
+  become: true
+  hosts: all
+  garther_facts: true
+  tasks:
+  - name: perform updates
+    win_updates:
+     category_names:
+       -SecurityUpdates
+       -CriticalUpdates
+       -UpdateRollups
+     reboot: yes
+     reboot_timeout: 3600
