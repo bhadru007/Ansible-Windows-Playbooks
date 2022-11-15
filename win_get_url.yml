@@ -4,7 +4,7 @@
   become: false
   vars:
     myurl: "https://releases.ansible.com/ansible/ansible-2.9.25.tar.gz"
-    mydest: 'C:\Users\vagrant\Desktop\ansible-2.9.25.tar.gz'
+    mydest: 'C:\Users\Administrator\Desktop\ansible-2.9.25.tar.gz'
   tasks:
     - name: download file
       ansible.windows.win_get_url:
