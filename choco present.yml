@@ -1,5 +1,4 @@
 ---
-- name: Ensure Chocolatey installed
   hosts: all 
   tasks:
     - name: Ensure Chocolatey installed from internal repo
