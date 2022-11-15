@@ -1,8 +1,7 @@
 ---
 - name: run windows update on windows machines
-  become: true
   hosts: all
-  garther_facts: true
+  garther_facts: false
   tasks:
   - name: perform updates
     win_updates:
