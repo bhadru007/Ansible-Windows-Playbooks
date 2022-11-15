@@ -1,4 +1,5 @@
 ---
+- hosts: all
 - name: Ensure Chocolatey itself is installed, using a specific bootstrap script
   win_chocolatey:
     name: chocolatey
