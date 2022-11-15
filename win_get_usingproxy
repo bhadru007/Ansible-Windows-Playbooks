@@ -1,0 +1,19 @@
+---
+- name: get_url module with proxy demo
+  hosts: all
+  become: false
+  gather_facts: false
+  vars:
+    myurl: "https://releases.ansible.com/ansible/ansible-2.9.25.tar.gz"
+    mycrc: "sha256:https://releases.ansible.com/ansible/ansible-2.9.25.tar.gz.sha"
+    mydest: "/home/Administrator/ansible-2.9.25.tar.gz"
+  tasks:
+    - name: download file with proxy
+      ansible.builtin.get_url:
+        url: "{{ myurl }}"
+        dest: "{{ mydest }}"
+        checksum: "{{ mycrc }}"
+        mode: '0644'
+        owner: Administrator
+      environment:
+        https_proxy: "http://proxy.telecom.tcnz.net:80/"
